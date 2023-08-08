@@ -4,178 +4,308 @@ export default function Home() {
   return (
     <>
 
-      <section className="whole container mx-auto   max-w-full">
 
-
-        <header className="flex justify-between items-center lg:px-14 px-4">
-          <div className="logo w-40 lg:w-40 p-2">
-            <img src="./images/logoo.png" alt="logo" className="w-full h-auto" />
-          </div>
-          <div className="manu lg:flex lg:items-center lg:space-x-10 capitalize  lg:visible invisible">
-            <ul className="flex flex-wrap space-x-10">
-              <li className="hover:text-[red] text-[#151515] cursor-pointer text-[14px] font-[abc]">tv</li>
-              <li className="hover:text-[red] cursor-pointer text-[#151515] text-[14px] font-[abc]">internet</li>
-              <li className="hover:text-[red] cursor-pointer text-[#151515] text-[14px] font-[abc]">streaming</li>
-              <li className="hover:text-[red] cursor-pointer text-[#151515] text-[14px] font-[abc]">what to watch</li>
-              <li className="hover:text-[red] cursor-pointer text-[#151515] text-[14px] font-[abc]">resources</li>
-            </ul>
-          </div>
-          <div className="relative mt-4 lg:mt-0 lg:visible invisible">
-            <input type="search" placeholder="Enter the search term or zip code" className="pl-2 text-sm italic w-full lg:w-64 border-2 text-white rounded-lg py-2 focus:outline-none" />
-            <i className="fa-solid fa-magnifying-glass absolute top-4 right-2 tracking-tighter"></i>
-          </div>
-        </header>
-
-
-
-        <div className="hero bg-gradient-to-r from-[#0a0a19] to-[#202050] w-full aspect-auto h-[270px]  text-white px-2">
-          <div className="content flex flex-col md:text-center md:h-full justify-center items-center">
-            <div className="flex flex-col">
-              <p className="font-semibold text-[14px] md:text-[16px] text-sm tracking-tighter xl:text-[20px] font-[abc] text-center mb-[-16px]">TV AND INTERNET PROVIDERS IN</p>
-
-              <h1 className="lg:text-[2.25rem] xl:text-[3rem] font-bold font-[abc] tracking-tighter text-center">AGAWAM TOWN, MASSACHUSETTS</h1>
+<header className="h-auto shadow-md py-3 font-[Roboto]">
+        <nav className="flex items-center justify-between  px-4 py-2">
+            <div className=" lg:px-4 pl-10 w-96 ">
+                <img src="/image/logo.svg" alt="">
             </div>
-            <div className="location pt-2">
-              <a href="" className="border-b-2 capitalize text-xs  ">change location</a>
+            <div className="nav-links md:static bg-white md:min-h-fit absolute min-h-[25vh] left-0 top-[-100%]  md:w-auto w-full flex items-center px-5 ">
+             <ul className="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-5  ">
+                <a href="#">Inter & TV</a>
+                <a href="#">Providers</a>
+                <a href="#">Resources & Tools</a> 
+                <div className="items-center gap-3 text-blue-600 flex ">
+               <i className="fa-solid fa-phone "></i>
+               <p className="">855-512-0491</p>
+           </div>
+             </ul>
+             
+            </div>
+            
+            <div className="flex items-center">
+                <ion-icon onclick="onToggleMenu(this)" name="menu-outline" className="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+<!-- ////hero/// -->
+<div className="flex justify-center mt-10 ">
+  <div className="w-full xl:h-auto  bg-[#F3FAFF] shadow-xl xl:w-[80vw] md:w-[170vh]  rounded-3xl  px-10 grid lg:grid-cols-2  items-center lg:absolute">
+    <div className="mt-5">
+        <h1 className="font-[Roboto] text-[45px]">Find <span className="text-[#039b8e]">Internet & TV Providers</span> in Your Area</h1>
+        <div className="w-full py-5 mt-6 bg-white border md:h-52 rounded-3xl md:w-full">
+            <div className="relative flex items-center w-full px-12 mt-6 md:mt-10">
+                <i className="absolute ml-3 fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Enter Zip Code" className="w-full py-3 pl-10 pr-8 border outline-none md:w-80 border-zinc-400 rounded-l-md" />
+                <button className="px-4 py-[13px] font-semibold text-white bg-blue-500 border-zinc-400 rounded-r-md">Search</button>
+            </div>
+              
+            <div className="flex px-4 mt-6 md:gap-3 md:mt-5 md:px-10 font-[Roboto]">
+              <input type="radio" name="" id="" className="w-10 h-7" />
+              <h5>Internet</h5>
+              <input type="radio" name="" id="" className="w-10 h-7" />
+              <h5>TV</h5>
+              <input type="radio" name="" id="" className="w-10 h-7" />
+              <h5>Bundle</h5>
             </div>
           </div>
-        </div>
+     </div>
+     <div className="">
+        <img src="/image/hso-background-1.webp" alt="" className="float-right h-[85vh] " />
+     </div>
+  </div>
+</div>
 
-
-        <div className=" bg-[#e6e6e6] w-full max-wfull">
+<div className="w-full h-auto pb-10 lg:mt-[70vh] bg-[#F3FAFF]">
+    <div className="relative grid gap-5 px-5 xl:grid-cols-3 lg:px-32 lg:grid-cols-3 ">
+      <div className="w-full h-auto py-5 mt-10 bg-white lg:w-80
+       rounded-3xl lg:mt-40">
+        <div className="mt-5">
+          <img src="/image/LaptopIcon.svg" alt="" className="h-20 mx-auto">
+          <h2 className="mt-5 text-center text-xl lg:text-2xl font-[Roboto]">Compare Top Providers</h2>
           <div>
-            <h1 className=" font-extrabold lg:text-[30px] text- text-center mx-auto text-[#151515] lg:leading-[2.5rem]">Internet providers in Agawam Town, Massachusetts</h1>
+            <p className="px-5 mt-5 text-sm text-center">
+              Don’t pay for more than you need! Use our <span className="text-blue-500">Internet Speed Calculator</span> to determine the best internet speed for your lifestyle.
+            </p>
           </div>
-          <div className=" w-full lg:max-w-[1200px]  mx-auto py-4 h-auto ">
-            <div className="bg-black text-white flex justify-between px-5 py-1 rounded-t-md">
-              <h2 className="font-[abc] text-[18px]">T-Mobile Home Internet</h2>
-              <h5 className="font-[abc] font-semibold">99% available in 01001</h5>
-            </div>
-            <div className="bg-white shadow-md rounded-b-md w-full h-auto grid lg:grid-cols-6 md:grid-cols-3  border py-8 ">
-              <div className="border-r ">
-                <img src="./images/images.png" alt="" className=" mt-7 px-5" />
-                <hr className="lg:invisible visible mt-5" />
-              </div>
-
-              <div className="border-r px-2 mt-8 pl-4">
-                <figure>
-                  <img src="./images/images.jpg" alt="" className="w-[120px] h-[20px]" />
-                </figure>
-                <span className="text-[#5050b9]  hover:border-[#5050b9] text-sm  hover:text-red-600 border-b-[#5050b9] ">Customer Rating</span>
-                <hr className="lg:invisible visible mt-5" />
-              </div>
-
-
-              <div className="text-center border-r">
-                <h4 className="mt-12 font-[abc] font-bold">Speeds up to 245 Mbps</h4>
-                <hr className="lg:invisible visible mt-5" />
-              </div>
-              <div className="px-5 text-[12px] border-r  ">
-                <div className="flex gap-3 pl-2">
-                  <svg className="lg:w-12 w-6 h-8  text-[#5050b9] font-extrabold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7" ></path>
-                  </svg>
-                  <p>15-day free trial to see how well T-Mobile 5G operates in your home.</p>
-                </div>
-                <br />
-                <div className="flex gap-3">
-                  <svg className="w-6 h-4  text-[#5050b9] font-extrabold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <p>No contract required!</p>
-                </div>
-                <hr className="md:invisible visible mt-5" />
-                <div className="flex gap-3">
-                  <svg className="w-6 h-4  text-[#5050b9] font-extrabold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <p className="">Your price is locked in.</p>
-                </div>
-                <hr className="md:invisible visible mt-5" />
-              </div>
-              <div className="text-center px-5 border-r">
-                <h5 className="mt-10 ">Price starting from <br /> <span className="font-extrabold text-blue-950 font-[abc] text-xl">$50.00</span> /mo.</h5>
-                <hr className="lg:invisible visible mt-5" />
-              </div>
-              <div className="justify-center items-center flex lg:border-l-2">
-                <button className="text-white whitespace-nowrap font-[abc] flex justify-between uppercase items-center px-[20px] py-[10px] bg-[#ff2128] hover:bg-[#cf2e2e]">View Plans</button>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <section className="container mx-auto max-w-full mt-6 mb-6 overflow-x-scroll">
-            <table className="table-auto overflow-scroll w-full lg:w-[1200px] text-black  border-2 border-gray-300 mx-auto">
-              <thead className="bg-[#1d253c] text-center">
-                <tr className="text-[#f3f3f3]">
-                  <th className="md:p-2 text-[#f3f3f3]">Provider</th>
-                  <th className="md:p-2 text-[#f3f3f3]">Prices
-                    starting at*</th>
-                  <th className="md:p-2  text-[#f3f3f3]">Max download
-                    speeds up to</th>
-                  <th className="md:p-2  text-[#f3f3f3]">Features</th>
-                  <th className="md:p-2  text-[#f3f3f3]">Area
-                    availability*</th>
-                  <th className="md:p-2 whitespace-pre"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-[#fefefe]  pl-2">
-                  <td className="border     font-[abc] text underline  hover:text-[#ff2128] text-[#5050b9]">T-Mobile</td>
-                  <td className="border ">$50.00/mo.</td>
-                  <td className="border ">	245 Mbps</td>
-                  <td className="border ">15-day free trial to see how well T-Mobile 5G operates in your home</td>
-                  <td className="border ">99%</td>
-                  <td className="border ">   <button className=" bg-[#ff2128] text-[#fff]  px-[20px] py-[10px] font-[abc] hover:bg-red-600 whitespace-pre ">VIEW PLANS</button></td>
-                </tr>
-                <tr className="text-[#151515] text-start pl-2">
-                  <td className="border   font-[abc] text underline  hover:text-[#ff2128] text-[#5050b9] ">Xfinity</td>
-                  <td className="border ">$24.99/mo</td>
-                  <td className="border ">1,000 Mbps</td>
-                  <td className="border ">Qualify for the Affordable Connectivity Program for an additional $30/mo. Savings</td>
-                  <td className="border ">	100%</td>
-                  <td className="border ">   <button className=" bg-[#ff2128] text-[#fff]  px-[20px] py-[10px] font-[abc] hover:bg-red-600 whitespace-pre ">VIEW PLANS</button></td>
-                </tr>
-                <tr className="bg-[#fefefe] text-start pl-2">
-                  <td className="border  font-[abc] text underline   hover:text-[#ff2128]  text-[#5050b9]">Verizon</td>
-                  <td className="border ">$39.99/mo.</td>
-                  <td className="border ">300 Mbps</td>
-                  <td className="border ">Fios Internet provides 99.9% network reliability.</td>
-                  <td className="border ">100%</td>
-                  <td className="border "><button className=" bg-[#ff2128] text-[#fff]  px-[20px] py-[10px] font-[abc] hover:bg-red-600 whitespace-pre ">VIEW PLANS</button></td>
-                </tr>
-                <tr className="text-start pl-2">
-                  <td className="border-2   font-[abc] text underline  hover:text-[#ff2128] text-[#5050b9]">HughesNet</td>
-                  <td className="border  ">$64.99/mo</td>
-                  <td className="border  ">25 Mbps</td>
-                  <td className="border  ">Cheapest residential satellite in the US</td>
-                  <td className="border ">	100%</td>
-                  <td className="border ">
-                    <button className=" bg-[#ff2128] text-[#fff]  px-[20px] py-[10px] font-[abc] hover:bg-red-600 whitespace-pre ">VIEW PLANS</button>
-                  </td>
-                </tr>
-                <tr className="bg-[#fefefe] text-start pl-2">
-                  <td className="border font-[abc] hover:text-[#ff2128] text underline text-[#5050b9]">Viasat</td>
-                  <td className="border  ">	$84.99/mo</td>
-                  <td className="border ">100 Mbps</td>
-                  <td className="border ">	Quick, simple installation.</td>
-                  <td className="border ">100%</td>
-                  <td className="border ">
-                    <button className=" bg-[#ff2128] text-[#fff] px-[20px] py-[10px] font-[abc] hover:bg-red-600 whitespace-pre ">VIEW PLANS</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-
         </div>
+      </div>
+      <div className="w-full h-auto py-5 mt-10 bg-white lg:w-80 rounded-3xl lg:mt-40">
+        <div className="mt-5">
+          <img src="/image/LaptopIcon.svg" alt="" className="h-20 mx-auto">
+          <h2 className="mt-5 text-center text-xl lg:text-2xl font-[Roboto]">Compare Top Providers</h2>
+          <div>
+            <p className="px-5 mt-5 text-sm text-center">
+              Dont pay for more than you need! Use our <span className="text-blue-500">Internet Speed Calculator</span> to determine the best internet speed for your lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-auto py-5 mt-10 bg-white lg:w-80 rounded-3xl lg:mt-40 ">
+        <div className="mt-5">
+          <img src="/image/LaptopIcon.svg" alt="" className="h-20 mx-auto">
+          <h2 className="mt-5 text-center text-xl lg:text-2xl font-[Roboto]">Compare Top Providers</h2>
+          <div>
+            <p className="px-5 mt-5 text-sm text-center">
+              Dont pay for more than you need! Use our <span className="text-blue-500">Internet Speed Calculator</span> to determine the best internet speed for your lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          
 
-      </section>
+<div>
+    <div className="text-center text-3xl mt-10 font-[Roboto]">
+        <h2>Compare Internet Providers in Major Cities</h2>
+    </div>
 
+    <div className="grid justify-center gap-4 px-10 mt-10 lg:px-28 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        <div className=" bg-[#F5F5F5] rounded-2xl w-60 px-4 py-4 text-blue-500 font-[Roboto] hover:drop-shadow-2xl hover:shadow-bg-[#f5f5f5]">
+         <div className="flex justify-between">
+            <h3 className="text-xl">Denver</h3>
+            <i className="items-center text-right fa-solid fa-arrow-right"></i>
+         </div>
+           <div> 
+              <p className="text-blue-400">Internet Providers</p>
+           </div>
+        </div>
+        
+        
+
+
+
+         </div>
+    </div>
+
+
+    <!-- <div className="grid lg:grid-cols-[60vh_auto] mt-10 px-20 gap-20">
+       <dir className="mx-auto ">
+        <img src="/image/girl.jpg" alt="" className="h-screen mt-4 shadow-md rounded-3xl shadow-gray-500">
+       </dir>
+       <div className="mt-5">
+        <h2 className="text-2xl font-[Roboto]">Why Compare with HighSpeedOptions</h2>
+        <a href="https://www.highspeedoptions.com/disclosure" className="text-blue-600 font-[Rob] ">Advertiser Disclosure</a>
+
+        <div className="grid gap-10 mt-5 lg:grid-cols-2">
+            <div className="">
+            <h2 className="font-[Roboto] text-xl mb-3">Save Time</h2>
+            <p className="font-[Rob]  lg:w-72">Discover top providers near you in seconds by using our zip search tool. Filter plans based on internet, TV, bundles, and more.</p>
+            </div>
+            <div className="px-5">
+                <h2 className="font-[Roboto] text-xl mb-3">Save Money</h2>
+                <p className="font-[Rob]  lg:w-72">Compare prices in real-time and find the best deals available to fit your budget and digital needs.</p>
+            </div>
+            <div className="">
+                <h2 className="font-[Roboto] text-xl mb-3">Helpful Tools</h2>
+                <p className="font-[Rob] lg:w-72">Our <span className="text-blue-500">Resource Center</span> offers helpful insights and advice from subject matter experts to help you get the most out of your services.</p>
+            </div>
+            <div className="px-5">
+                <h2 className="font-[Roboto] text-xl mb-3">Get Expert Advice</h2>
+                <p className="font-[Rob]  lg:w-72">Our <span className="text-blue-500">team of experts</span> reviews providers on various criteria like performance and price to recommend the best options near you.</p>
+            </div>
+        </div>
+        <div className="bg-[#F3FAFF] py-5 px-10 mt-10 rounded-2xl">
+          <div>
+            <h2 className="font-[Roboto] text-2xl ">How Much Speed Do I Need?</h2>
+            <p className="font-[Rob] mt-2">Answer a few quick questions with our Speed Calculator to figure out the best internet speed for your lifestyle. Results are calculated based on the number of people and devices are in your household as well as your online habits.</p>
+            <button className="px-8 py-2 bg-blue-700 mt-5 rounded-xl text-white font-[Roboto]">Find Your Speed</button>
+          </div>
+        </div>
+       </div>
+    </div> 
+    <div className="grid lg:grid-cols-[60vh_auto] mt-10 px-20 gap-20">
+      <dir className=" bg-[url('/image/dots2.svg')] bg-no-repeat mx-auto ">
+       <img src="/image/girl.jpg" alt="" className="h-screen mt-10 ml-8 shadow rounded-3xl shadow-gray-500" />
+      </dir>
+      <div className="mt-10">
+       <h2 className="text-2xl font-[Roboto]">Why Compare with HighSpeedOptions</h2>
+       <a href="https://www.highspeedoptions.com/disclosure" className="text-blue-600 font-[Rob] ">Advertiser Disclosure</a>
+
+       <div className="grid gap-10 mt-5 lg:grid-cols-2">
+           <div className="">
+           <h2 className="font-[Roboto] text-xl mb-3">Save Time</h2>
+           <p className="font-[Rob]  lg:w-72">Discover top providers near you in seconds by using our zip search tool. Filter plans based on internet, TV, bundles, and more.</p>
+           </div>
+           <div className="px-5">
+               <h2 className="font-[Roboto] text-xl mb-3">Save Money</h2>
+               <p className="font-[Rob]  lg:w-72">Compare prices in real-time and find the best deals available to fit your budget and digital needs.</p>
+           </div>
+           <div className="">
+               <h2 className="font-[Roboto] text-xl mb-3">Helpful Tools</h2>
+               <p className="font-[Rob] lg:w-72">Our <span className="text-blue-500">Resource Center</span> offers helpful insights and advice from subject matter experts to help you get the most out of your services.</p>
+           </div>
+           <div className="px-5">
+               <h2 className="font-[Roboto] text-xl mb-3">Get Expert Advice</h2>
+               <p className="font-[Rob]  lg:w-72">Our <span className="text-blue-500">team of experts</span> reviews providers on various criteria like performance and price to recommend the best options near you.</p>
+           </div>
+       </div>
+       <div className="bg-[#F3FAFF] py-5 px-10 mt-10 rounded-2xl">
+         <div>
+           <h2 className="font-[Roboto] text-2xl ">How Much Speed Do I Need?</h2>
+           <p className="font-[Rob] mt-2">Answer a few quick questions with our Speed Calculator to figure out the best internet speed for your lifestyle. Results are calculated based on the number of people and devices are in your household as well as your online habits.</p>
+           <button className="px-8 py-2 bg-blue-700 mt-5 rounded-xl text-white font-[Roboto]">Find Your Speed</button>
+         </div>
+       </div>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     </>
 
   );
