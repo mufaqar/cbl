@@ -7,7 +7,7 @@ export default function Home() {
    return (
       <>
          <section className="flex justify-center mt-10 ">
-            <div className="w-full bg-[#F3FAFF] shadow-xl xl:w-[80vw] rounded-3xl sm:px-10 px-5 grid md:grid-cols-2  items-center">
+            <div className="bg-[#F3FAFF] container mx-auto px-4  shadow-xl rounded-3xl sm:px-10 grid md:grid-cols-2 items-center">
                <div className="py-10">
                   <h1 className="font-[Roboto] text-[45px]">Find <span className="text-[#039b8e]">Internet & TV Providers</span> in Your Area</h1>
                   <div className="w-full py-5 mt-6 bg-white border md:h-52 rounded-3xl md:w-full">
