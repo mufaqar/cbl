@@ -1,6 +1,14 @@
+'use client';
+
 import Image from 'next/image'
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+   const [zipcode, setzipcode] = useState<string>();
+   const [pro_type, setpro_type] = useState<string>();
+   const router = useRouter();
+
    return (
       <>
 
@@ -37,16 +45,16 @@ export default function Home() {
                   <div className="w-full py-5 mt-6 bg-white border md:h-52 rounded-3xl md:w-full">
                      <div className="relative flex items-center w-full px-12 mt-6 md:mt-10">
                         <i className="absolute ml-3 fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Enter Zip Code" className="w-full py-3 pl-10 pr-8 border outline-none md:w-80 border-zinc-400 rounded-l-md" />
-                        <button className="px-4 py-[13px] font-semibold text-white bg-blue-500 border-zinc-400 rounded-r-md">Search</button>
+                        <input type="text" placeholder="Enter Zip Code" name="zip_code" value={zipcode} onChange={(e) => setzipcode(e.target.value)} className="w-full py-3 pl-10 pr-8 border outline-none md:w-80 border-zinc-400 rounded-l-md" />
+                        <button className="px-4 py-[13px] font-semibold text-white bg-blue-500 border-zinc-400 rounded-r-md" onClick={() => router.push(`/providers?zipcode=${zipcode}&type=${pro_type}`)}>Search</button>
                      </div>
 
                      <div className="flex px-4 mt-6 md:gap-3 md:mt-5 md:px-10 font-[Roboto]">
-                        <input type="radio" name="" id="" className="w-10 h-7" />
+                        <input type="radio" name="internet" value="internet" checked={pro_type === "internet"} onChange={(e) => setpro_type(e.target.value)} className="w-10 h-7" />
                         <h5>Internet</h5>
-                        <input type="radio" name="" id="" className="w-10 h-7" />
+                        <input type="radio" name="tv" value="tv" checked={pro_type === "tv"} onChange={(e) => setpro_type(e.target.value)} className="w-10 h-7" />
                         <h5>TV</h5>
-                        <input type="radio" name="" id="" className="w-10 h-7" />
+                        <input type="radio" name="bundle" value="bundle" checked={pro_type === "bundle"} onChange={(e) => setpro_type(e.target.value)} className="w-10 h-7" />
                         <h5>Bundle</h5>
                      </div>
                   </div>

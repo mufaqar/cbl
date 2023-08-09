@@ -1,6 +1,11 @@
+'use client'
+import { useParams } from 'next/navigation'
+
 import Image from 'next/image'
 
 export default function Providers() {
+  const params = useParams()
+  console.log(params);
   return (
     <>
 
